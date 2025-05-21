@@ -50,7 +50,7 @@ const StarryBackground = () => {
     };
 
     window.addEventListener('resize', resize);
-    resize();
+    initStars(); // Call initStars here
 
     // Handle mouse move
     const handleMouseMove = (e: MouseEvent) => {
@@ -95,7 +95,6 @@ const StarryBackground = () => {
       animationFrameRef.current = requestAnimationFrame(animate);
     };
 
-    initStars();
     animate();
 
     // Cleanup
